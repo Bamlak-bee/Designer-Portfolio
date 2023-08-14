@@ -4,7 +4,7 @@
   --background-color: #202020;
   --text-color: #D6D6D6;
   --title: #FFD100;
-  --background:#333;
+  --background: #333;
 }
 
 * {
@@ -14,28 +14,45 @@
 
 header {
   color: var(--text-color);
-  display: flex;
-  height: 10em;
-  gap: 75%;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  background-color: #ffd00046;
-  font-size: 1em;
+  height: 10em;
+  font-size: 1.1em;
   font-family: 'Poppins';
+}
+
+.left {
+  justify-self: left;
+  margin: 0 6em;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin: 0 6em;
+}
+
+.right :nth-child(2) {
+  border: 2px solid var(--title);
+  padding: 10px;
+  background-color: var(--title);
+  border-radius: 10px;
+  color: #202020;
+  font-size: 18px;
 }
 
 header a {
   color: var(--text-color);
   text-decoration: none;
-  text-align: end;
 }
 
 .contact {
-  background-color: #333;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 60px;
 
 }
 
@@ -47,11 +64,10 @@ header a {
 }
 
 .links {
-/* background-color: aliceblue; */
-width: 100%;
+  width: 100%;
+  text-align: end;
 
 }
-
 .links p {
   color: var(--text-color);
 }
@@ -121,10 +137,8 @@ ul {
 
 
 }
-@media (max-width:1000px) {
 
-  
-}
+@media (max-width:1000px) {}
 
 /* -----------Footer css--------- */
 .footer {
@@ -133,7 +147,7 @@ ul {
   height: 541px;
   justify-content: space-evenly;
   align-items: center;
-  
+
 }
 
 .about_me {
@@ -143,7 +157,8 @@ ul {
 
 
 }
-.about_me span{
+
+.about_me span {
   color: var(--title);
 }
 

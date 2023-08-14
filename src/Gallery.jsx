@@ -50,6 +50,7 @@ function Gallery() {
                     <img src={pen} alt="" />
                     redesign
                 </div>
+               
             </div>
            
 

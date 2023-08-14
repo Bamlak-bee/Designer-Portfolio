@@ -1,28 +1,33 @@
 import React from 'react';
 import Gallery from './Gallery';
-// import Banner from './Banner';
-// import psd from './photoshop.png';
-// import figma from './figma.png';
-// import illustrator from './illustrator.png';
+import pdfFile from './pdf/Bamlak_Resume.pdf';
 import Footer from './Footer';
 
 function Home() {
   return (
     <div className='App'> 
     <header>
+      <div className="left">
+
       <p>Bamlak Tesfaye</p>
+      </div>
+      <div className="right">
       <a href="#about">About</a>
+      <a href={pdfFile} target="_blank" rel="noopener noreferrer">
+         Resume
+      </a>
+      </div>
+      
     </header>
       <main>
 
         <div className="contact">
-          <div className="about" >Hello, I am Bamlak, a passionate UI/UX designer and an always curious tech enthusiast.  I specialize in designing for both web and mobile platforms.</div>
+          <div className="about" >Hello, I am Bamlak, a passionate UI/UX designer and an always curious tech enthusiast.  I design for both web and mobile platforms.</div>
           <div className='links'>
             <p>Let's work together:</p>
             <a href='bamlakbee.12@gmail.com'>bamlakbee.12@gmail.com</a>
-
+            
           </div>
-          <img src="./link.svg" alt="" />
         </div>
 
         <div className="gallery">
@@ -46,4 +51,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Home;
