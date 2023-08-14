@@ -7,9 +7,6 @@ import Shemach from './Shemach';
 import Jivandayi from './Jivandayi';
 
 
-
-
-
 function App() {
   return (
     <div>
