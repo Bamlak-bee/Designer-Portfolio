@@ -4,9 +4,9 @@ import "./shemach.css";
 import ScrollToTopButton from './ScrollToTopButton'; // Import your CSS file for styling
 import {
   rec1,rec2,
-  rec3,screen,userflow,
-  persona1,persona2,persona3,
-  empathy1,empathy2,mock3,lofi1,
+  rec3,userflow,
+  persona1,persona2,persona3
+,mock3,lofi1,
   lofi2,lofi3,lofi4,lofi5,lofi6,lofi7,lofi8, goal,
   process,overview,
   mock,sol,prob, scr1,scr2, scr3,scr4,scr5,scr6,scr7,scr8,scr9,scr10,scr11,scr12,scr13,scr14,scr15,scr16
