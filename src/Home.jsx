@@ -1,24 +1,12 @@
 import React from 'react';
-import Gallery from './Gallery';
-import pdfFile from './pdf/Bamlak_Resume.pdf';
-import Footer from './Footer';
+import Gallery from './components/Gallery';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function Home() {
   return (
     <div className='App'> 
-    <header>
-      <div className="left">
-
-      <p>Bamlak Tesfaye</p>
-      </div>
-      <div className="right">
-      <a href="#about">About</a>
-      <a href={pdfFile} target="_blank" rel="noopener noreferrer">
-         Resume
-      </a>
-      </div>
-      
-    </header>
+    <Navbar/>
       <main>
 
         <div className="contact">
@@ -36,7 +24,9 @@ function Home() {
 
         </div>
 
-        <div className="banner">
+
+      </main>
+      <div className="banner">
           <ul>
             <li>Mobile design</li>
             <li>web design</li>
@@ -44,10 +34,8 @@ function Home() {
             <li>logo design</li>
           </ul>
         </div>
-
-
-      </main>
-      <Footer /></div>
+      <Footer />
+      </div>
   )
 }
 
