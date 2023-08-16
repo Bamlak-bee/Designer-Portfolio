@@ -1,23 +1,14 @@
 import React from 'react';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavBar/Navbar';
 
 function Home() {
   return (
     <div className='App'> 
     <Navbar/>
       <main>
-
-        <div className="contact">
-          <div className="about" >Hello, I am Bamlak, a passionate UI/UX designer and an always curious tech enthusiast.  I design for both web and mobile platforms.</div>
-          <div className='links'>
-            <p>Let's work together:</p>
-            <a href='bamlakbee.12@gmail.com'>bamlakbee.12@gmail.com</a>
-            
-          </div>
-        </div>
-
+       
         <div className="gallery">
           <h1>featured work</h1>
           <Gallery />
@@ -35,6 +26,7 @@ function Home() {
           </ul>
         </div>
       <Footer />
+      
       </div>
   )
 }

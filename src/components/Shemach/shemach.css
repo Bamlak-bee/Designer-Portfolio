@@ -15,43 +15,59 @@
 
 body {
     background-color: var(--background-color);
-    overflow-x: hidden;
 }
- .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 150vh;
+ /* .header {
+    height: 100vh;
+    width: 100%;
 } 
 .background {
     background-image: url('../../1.png');
+    background-size: cover;
     height: 100%;
     width: 100%;
+    background-repeat: no-repeat;
+
+} */
+.header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../1.png');
     background-size: cover;
-    /* overflow: hidden; */
-}
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  }
 .header h1 {
     color: var(--text, #FFD100);
     font-family: Poller One;
     font-size: 4em;
     text-transform: uppercase;
-    text-align: center;
+    text-align: center; 
     position: relative;
-    bottom:80%;
+    z-index: 1;
 }
 
 .header p {
     color: var(--background-color);
     text-align: center;
     font-family: Poppins;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     font-style: normal;
     font-weight: 400;
+    text-align: center;
     position: relative;
-    bottom: 80%;
-    width: 42rem;
+    z-index: 1;
 
-}
+} 
 
 .main {
     color: var(--text-color);
@@ -68,9 +84,10 @@ body {
     justify-content: space-between;
     background-color: var(--background);
     border-radius: 24px;
-    font-size: 16px;
+    font-size: 1.1rem;
     font-weight: 400;
     margin: 20px 60px;
+    padding: 0 2rem ;
 }
 
 .main .overview h1 {
@@ -89,11 +106,6 @@ body {
     line-height: 27px;
 }
 
-.mock img {
-    width: 80%;
-    padding: 4rem;
-
-}
 
 .process {
     display: flex;
@@ -133,15 +145,15 @@ body {
     align-items: center;
     font-size: 16px;
 }
-
-.mock-2 {
+.mock{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.mock-2 img {
-    width: 55%;
+}
+.mock img{
+    width: 75%;
 }
 
 .user-flow img {
@@ -164,6 +176,7 @@ body {
     font-size: 3rem;
     font-weight: 600;
     text-transform: uppercase;
+    margin-top: 4rem;
 }
 
 .personas {
@@ -171,46 +184,16 @@ body {
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    margin: 2rem 0;
 
 }
 
 .personas img {
     width: 30%;
 }
-
-.empathy_cont {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 40px;
-}
-
-.empathy_cont h2 {
-    color: var(--text-2, #D6D6D6);
-    margin: 60px 0px;
-    font-family: 'Poller One';
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.empathy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #d6d6d620;
-    max-width: 80vw;
-}
-
-.empathy img {
-    width: auto;
-}
-
-.mock-3 img {
+.mock-3 img{
     width: 100%;
 }
-
 .style-guides h2 {
     color: var(--text-2, #D6D6D6);
     font-family: 'Poller One';
@@ -413,23 +396,34 @@ body {
     text-transform: uppercase;
     padding: 60px 0;
 }
+.footer a{
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Poppins';
+    margin: 60px 0;
+}
+.footer a:hover{
+    text-decoration: underline var(--title);
 
+}
 @media (max-width: 1000px) {
 
     .overview {
         display: flex;
         height: max-content;
-        padding: 0rem 1rem;
+        padding: 3rem 1rem;
         border-radius: 0.75rem;
-        background: #363636;
+        background: #551c1c;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 1.5rem;
-        align-self: stretch;
-        padding: 130px;
+        /* justify-content: center; */
+        /* align-items: flex-start; */
+        /* gap: 1.5rem;  */
     }
-
+    .overview .content{
+        padding: 2rem 0;
+    }
     .persona_cont h2 {
         font-size: 2rem;
         padding-top: 20px;

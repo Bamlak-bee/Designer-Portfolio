@@ -1,8 +1,8 @@
 // images.js
 
-export const rec1 = require('./assets/images/mocks/Rectangle-1.png');
-export const rec2 = require('./assets/images/mocks/Rectangle-2.png');
-export const rec3 = require('./assets/images/mocks/Rectangle.png');
+export const rec1 = require('./assets/images/iphone-mockup.png');
+export const rec2 = require('./assets/images/mock2.png');
+export const rec3 = require('./assets/images/mock3.png');
 export const userflow = require('./assets/images/Userflow.png');
 //persona 
 
@@ -42,14 +42,10 @@ export const  scr4 = require('./assets/images/hi-fi/onboarding/on4.png');
 export const  scr5 = require('./assets/images/hi-fi/onboarding/on5.png');
 export const  scr6 = require('./assets/images/hi-fi/onboarding/on6.png');
 
-export const  scr7 = require('./assets/images/hi-fi/others/13 Pro - 14.png');
-export const  scr8 = require('./assets/images/hi-fi/others/13 Pro - 15.png');
-export const  scr9 = require('./assets/images/hi-fi/others/13 Pro - 17.png');
-export const  scr10 = require('./assets/images/hi-fi/others/13 Pro - 18.png');
-export const  scr11= require('./assets/images/hi-fi/others/13 Pro - 19.png');
-export const  scr12 = require('./assets/images/hi-fi/others/13 Pro - 22.png');
-export const  scr13= require('./assets/images/hi-fi/others/13 Pro - 63.png');
-export const  scr14= require('./assets/images/hi-fi/others/13 Pro - 64.png')
+export const  scr7 = require('./assets/images/hi-fi/others/Homescreen.png');
+export const  scr8 = require('./assets/images/hi-fi/others/Fruits-list.png');
+export const  scr9 = require('./assets/images/hi-fi/others/Vegg-list.png');
+export const  scr10 = require('./assets/images/hi-fi/others/13 Pro - 30.png');
 // export const  scr15 = require('./hi-fi/13 Pro - 5.png');
 // export const  scr15 = require('./hi-fi/Login.png');
 // export const  scr16 = require('./hi-fi/Sign up.png');

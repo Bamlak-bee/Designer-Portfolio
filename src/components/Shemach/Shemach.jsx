@@ -8,7 +8,7 @@ import {
   persona1,persona2,persona3
 ,mock3,lofi1,
   lofi2,lofi3,lofi4,lofi5,lofi6,lofi7,lofi8, goal,
-  process,overview,sol,prob, scr1,scr2, scr3,scr4,scr5,scr6,scr7,scr8,scr9,scr10,scr11,scr12,scr13,scr14
+  process,overview,sol,prob, scr1,scr2, scr3,scr4,scr5,scr6,scr7,scr8,scr9,scr10
 } from '../../images';
 
 function Shemach() {
@@ -59,21 +59,18 @@ function Shemach() {
             To address these challenges, the grocery selling app has a clean and intuitive interface that makes navigation and product search easy. The app should also has a comprehensive amount of products, with accurate and up-to-date information, including product images, nutritional information, and ingredient lists. The app should also allow users to add items to their cart and checkout securely and quickly.  By designing an app that caters to users' needs, the Shemach can become the go-to destination for online grocery shopping.
           </div>
         </div>
-        <div className="mock">
-
-          {/* <img src={mock} alt="" /> */}
-        </div>
+        
 
         <div className="process">
           <h2>design  process</h2>
           <img src={process} alt="" />
 
         </div>
-        {/* <Table /> */}
-        <div className="mock-2">
-          <img src={rec1} alt="" />
-          <img src={rec2} alt="" />
+
+        <div className="mock">
           <img src={rec3} alt="" />
+          <img src={rec2} alt="" />
+          <img src={rec1} alt="" />
         </div>
         <div className="user-flow">
           <img src={userflow} alt="" />
@@ -189,16 +186,13 @@ function Shemach() {
             <img src={scr8} alt="" />
             <img src={scr9} alt="" />
             <img src={scr10} alt="" />
-            <img src={scr11} alt="" />
-            <img src={scr12} alt="" />
-            <img src={scr13} alt="" />
-            <img src={scr14} alt="" />
+           
             
             </div>
           </div>
         </div>
         <div className="footer">
-          <a href="https://www.behance.net/gallery/169587475/Shemach-grocery-app-case-study">Check the full case study on Behance</a>
+          <a href="https://www.behance.net/gallery/169587475/Shemach-grocery-app-case-study" target='_blank' rel="noopener noreferrer">Check the full case study on Behance</a>
           <ScrollToTopButton/>
         </div>
       </div>

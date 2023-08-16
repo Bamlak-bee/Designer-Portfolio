@@ -12,121 +12,42 @@
   padding: 0;
 }
 
-header {
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  gap: 50%;
-  height: 10em;
-  font-size: 1.1em;
-  font-family: 'Poppins';
-}
 
-header .nav-btn,
-.nav {
-  /* display: none; */
-  visibility: hidden;
-  opacity: 0;
-}
-
-.left {
-  position: fixed;
-  left: 60px;
-}
-
-.right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 100px;
-  width: 100vw;
-  position: fixed;
-  right: 6rem;
-}
-
-.right :nth-child(2) {
-  border: 2px solid var(--title);
-  padding: 10px;
-  border-radius: 10px;
-  color: var(--text-color);
-  font-size: 18px;
-}
-
-.right :nth-child(2):hover {
-  background-color: var(--title);
-  color: var(--background-color);
-  transition: all ease-in-out 100ms;
-}
-
-
-header a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 30px 60px;
-  /* background-color: #FFD100; */
-}
-
-.about {
-  color: var(--text-color);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-}
-
-.links {
-  width: 100%;
-  text-align: end;
-
-}
-
-.links p {
-  color: var(--text-color);
-}
-
-.links a {
-  color: var(--text-color);
-  text-decoration-line: underline;
-
-}
-
-.gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--text-color);
-}
 
 .gallery h1 {
   color: var(--title);
   text-transform: uppercase;
   margin-top: 6rem;
   margin-bottom: 2rem;
+  text-align: center;
 
 }
 
 .gallery-photos {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 3rem;
   align-items: center;
-  background-color: #FFD100;
-  margin: 0 60px;
   height: fit-content;
-  padding: 4rem 0;
+  color: var(--text-color);
 
 }
 
 .item1 {
   display: flex;
-  height: 591px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
+  padding: 3rem;
+  border:  solid 2px #333;
+  border-radius: 40px;
+}
+.item1 p{
+  padding:  1rem 0;
+}
+.item1 > a > img{
+  width: 100%;
 }
 
 .details {
@@ -153,19 +74,6 @@ header a {
 
 }
 
-ul {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 13px 0px;
-  gap: 100px;
-  align-items: center;
-  list-style: none;
-  color: var(--title);
-  font-size: 22px;
-  text-transform: capitalize;
-
-
-}
 
 
 /* -----------Footer css--------- */
@@ -182,18 +90,6 @@ ul {
 
 }
 
-.about_me span {
-  color: var(--title);
-}
-
-.profile {
-  border-radius: 358.61px;
-  border: 5px solid var(--text, #FFD100);
-  width: 350px;
-  height: 350px;
-  flex-shrink: 0;
-  margin: 3rem;
-}
 
 
 
@@ -201,31 +97,9 @@ ul {
 
 
 
-@media (max-width: 1000px) {
-  header .nav-btn {
-    visibility: visible;
-
-  }
-
-  header .nav {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    height: 50%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1.5rem;
-    background-color: var(--background);
-    opacity: 0.5;
-    transition: 1s;
-    transform: translateY(-100vh);
-  }
-
-  header .responsive_nav {
-    transform: none;
-  }
+@media screen and (max-width: 540px) {
+  
+  
 
   .gallery-photos {
     display: flex;
@@ -235,34 +109,25 @@ ul {
 
   }
 
-  .details {
-    display: flex;
-    /* justify-content: start; */
-
-  }
 
   .item1 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    padding: 20px 20px;
   }
 
   .banner ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
   }
 
   .banner ul::before {
     content: 'Skills';
     font-family: 'Poppins';
-    padding-bottom: 2rem;
-    letter-spacing: 0.3rem;
-    font-size: 2rem;
+    padding-bottom: 0.3rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
 
   }
 
@@ -271,20 +136,22 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4rem;
+    margin: 1rem;
 
   }
 
   .about_me>span {
     text-align: center;
     font-size: 1.3rem;
-
+    color: var(--title);
 
   }
 
   .footer .profile {
     width: 200px;
     height: 200px;
+    background-color: #fff;
+    border-radius: 100%;
   }
 
   .footer .about_me {
