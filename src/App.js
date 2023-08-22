@@ -4,7 +4,7 @@ import Home from './Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Gallery from './components/Gallery';
 import Shemach from '../src/components/Shemach/Shemach';
-import Jivandayi from './components/Jivandayi';
+import Jivandayi from './components/Jivandayi/Jivandayi';
 
 
 function App() {

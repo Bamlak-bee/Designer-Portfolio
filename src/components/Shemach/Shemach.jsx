@@ -85,15 +85,7 @@ function Shemach() {
           </div>
         </div>
 
-        {/* <div className="empathy_cont">
-          <h2>
-            empathy map
-          </h2>
-          <div className="empathy">
-            <img src={empathy1} alt="" />
-            <img src={empathy2} alt="" />
-          </div>
-        </div> */}
+
         <div className="mock-3">
           <img src={mock3} alt="" />
         </div>
