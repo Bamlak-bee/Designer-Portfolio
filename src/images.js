@@ -46,6 +46,34 @@ export const  scr7 = require('./assets/images/hi-fi/others/Homescreen.png');
 export const  scr8 = require('./assets/images/hi-fi/others/Fruits-list.png');
 export const  scr9 = require('./assets/images/hi-fi/others/Vegg-list.png');
 export const  scr10 = require('./assets/images/hi-fi/others/13 Pro - 30.png');
-// export const  scr15 = require('./hi-fi/13 Pro - 5.png');
-// export const  scr15 = require('./hi-fi/Login.png');
-// export const  scr16 = require('./hi-fi/Sign up.png');
+
+
+//jivandayi images
+export const  jmock = require('./assets/images/J_Mockup.png');
+export const jmock2 = require('./assets/images/yoga.jpeg');
+export const jmock4 = require('./assets/images/JMockup4.png');
+export const jmock5 = require('./assets/images/JMockup5.png');
+export const jmock7 = require('./assets/images/jmock7.png');
+export const jphoto = require('./assets/images/music.jpeg');
+
+export const c_music = require('./assets/images/category_music.jpeg');
+export const c_yoga = require('./assets/images/category_yoga.jpeg');
+export const c_write = require('./assets/images/category_write.jpeg');
+export const c_meditation  = require('./assets/images/category_meditate.jpeg');
+
+
+
+export const logo = require('./assets/images/Logo.png');
+
+export const emoji1 = require('./assets/images/emojis/Anxious.png');
+export const emoji2 = require('./assets/images/emojis/Confused.png');
+export const emoji3 = require('./assets/images/emojis/Crying.png');
+export const emoji4 = require('./assets/images/emojis/Sad.png');
+export const emoji5 = require('./assets/images/emojis/angry.png');
+export const emoji6 = require('./assets/images/emojis/excited.png');
+export const emoji7 = require('./assets/images/emojis/happy.png');
+export const emoji8 = require('./assets/images/emojis/lonely.png');
+export const emoji9 = require('./assets/images/emojis/mad.png');
+export const emoji10 = require('./assets/images/emojis/thinking.png');
+export const emoji11 = require('./assets/images/emojis/Group 628.png');
+export const emoji12 = require('./assets/images/emojis/Tired.png');
