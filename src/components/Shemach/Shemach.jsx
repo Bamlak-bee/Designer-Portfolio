@@ -1,6 +1,5 @@
 import React from 'react';
 import "./shemach.css";
-// import Table from './Table';
 import ScrollToTopButton from '../ScrollToTopButton'; // Import your CSS file for styling
 import {
   rec1,rec2,
@@ -13,9 +12,9 @@ import {
 
 function Shemach() {
   return (
-    <div className='container'>
-      <div className="header">
-        <div className="background">
+    <div className='s-container'>
+      <div className="s-header">
+        <div className="s-background">
 
         </div>
           <h1>shemach</h1>

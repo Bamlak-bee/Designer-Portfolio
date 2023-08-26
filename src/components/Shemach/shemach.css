@@ -18,17 +18,17 @@ body {
     background-color: var(--background-color);
 }
 
-.header {
+.s-header {
     position: relative;
     height: 140vh;
     width: 100%;
 }
 
-.container {
+.s-container {
     overflow: hidden;
 }
 
-.background {
+.s-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -41,7 +41,7 @@ body {
     z-index: -1;
 }
 
-.header h1 {
+.s-header h1 {
     color: var(--background-color);
     font-family: Poller One;
     font-size: 4em;
@@ -52,7 +52,7 @@ body {
     top: 1em;
 }
 
-.header p {
+.s-header p {
     color: var(--background-color);
     font-family: Poppins;
     font-size: 1.2em;

@@ -1,12 +1,16 @@
 import React from 'react';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
-import Navbar from './components/NavBar/Navbar';
+// import Navbar from './components/NavBar/Navbar';
+import Hero from './components/Hero/Hero.jsx';
+import Banner from './components/Banner/Banner.jsx/Banner';
+
 
 function Home() {
   return (
     <div className='App'> 
-    <Navbar/>
+    {/* <Navbar/> */}
+    <Hero/>
       <main>
        
         <div className="gallery">
@@ -17,14 +21,8 @@ function Home() {
 
 
       </main>
-      <div className="banner">
-          <ul>
-            <li>Mobile design</li>
-            <li>web design</li>
-            <li>illustrations</li>
-            <li>logo design</li>
-          </ul>
-        </div>
+      <Banner/>
+     
       <Footer />
       
       </div>

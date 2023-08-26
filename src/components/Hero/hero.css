@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container{
+    box-sizing: border-box;
+    height: 80vh;
+    width: 95%;
+    margin: 0 auto;
+}
+/* .draw{
+    background-color: azure;
+    padding: 2em 0;
+} */
+.links{
+    display: flex;
+    justify-content: flex-end;
+}
+.links ul{
+    width: clamp(15%, 15%, 100%);
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    align-items: flex-end;
+    height:4em;
+}
+
+.fade-in {
+    height: 100vh;
+}
+.fade-in *{
+    color: var(--text-color);
+}
+.fade-in h1{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: calc(10vw + 2em);
+    word-wrap: wrap;
+    font-family: 'Alex Brush';
+
+}
+
+.fade-in p{
+    text-align: center;
+    font-size: 1em;
+    word-wrap: wrap;
+}
+.fade-in a{
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 1.2em;
+    padding: 1.2em 0;
+}
+.fade-in p:first-of-type{
+    text-align: center;
+    padding-top: 1em;
+    width: 50%;
+    margin: 0 auto;
+}
+.availablity{
+    font-size: 1.2em;
+    padding: 0.5em 0.5em;
+
+}
+.fade-in .btn-container{
+    width:calc(12vw + 12em);
+    display: flex;
+    margin: 0 auto;
+   gap: 0.5em;
+   padding-top:1em;
+}
+.btn-container button{
+    padding: 0.8em;
+    flex:1;
+    border: 1px solid;
+    font: 1.2em 'Poppins';
+    border-radius: 8px;
+    text-align: center;
+    color: var(--title);
+    background-color: transparent;
+    
+}

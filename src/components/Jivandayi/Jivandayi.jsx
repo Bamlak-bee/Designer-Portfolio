@@ -1,6 +1,6 @@
 import React from 'react'
 import './jivandayi.css'
-import { motion } from 'framer-motion'
+import {motion } from 'framer-motion'
 import {
   jmock, jmock2, jmock5, jphoto, jmock7, jmock4, logo
 } from '../../images'
@@ -20,13 +20,29 @@ function Jivandayi() {
       y: 0,
       transition: {
         duration: 1,
-        delay: i * 0.3,
+        delay: i * 0.3
       }
+
     })
 
   }
-
-
+  const scrollAnimation = {
+    initial: {
+      opacity:0,
+      scale:0.8,
+      y: -50
+    },
+    scroll :{
+      opacity: 1,
+      scale: 1,
+     y:50,
+     transition: {
+      stiffness: 20,
+      type : 'spring',
+      delay: 0.1
+     },
+    }
+  }
 
   return (
     <div className='j-container'>
@@ -40,15 +56,49 @@ function Jivandayi() {
         <p>mental health app.</p>
       </div>
 
-      <div className="brief">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa perspiciatis, deserunt dolorem nobis cumque magni illo tenetur iste porro debitis?
-        <img src="" alt="" />
-      </div>
 
-      <div className="mock-1">
+      <motion.div className="brief"
+      variants={scrollAnimation}
+      initial = 'initial'
+      whileInView= 'scroll'
+      viewport={{once: true}}
+           >
+      
+            
+        <div className="brief-left" >
+          <h2>brief</h2>
+          <p>Jivandyai means "giving life".
+            Jivandayi is an app for improving mental health.
+            It offers multiple methods to alleviate mental health issues.
+            It was a redesign project. I was repsonsible for redesigning the screens,
+            creating custom illustrations, and prototypes
+
+          </p>
+        </div>
+      
+        <div className="brief-right">
+            <h2>The project</h2>
+          <p>
+            <ul>
+              <li>Jivandayi app</li>
+              <li>Mobile app</li>
+              <li>Redesign app</li>
+              <li> </li>
+            </ul>
+          </p>
+        </div>
+
+      </motion.div>
+
+      <motion.div className="mock-1" 
+      variants={scrollAnimation}
+      initial = 'initial'
+      whileInView= 'scroll'
+      viewport={{once: true}}
+      >
 
         <img src={jmock} alt="" />
-      </div>
+      </motion.div>
 
       <div className="photo-cont">
         <img src={jmock2} alt="" srcset="" />
@@ -83,8 +133,8 @@ function Jivandayi() {
         <div className="category">
           {categories.map((image) => (
             <img src={image.image}
-            className='category_photo'
-               alt=''
+              className='category_photo'
+              alt=''
               style={{
                 borderRadius: image.border
 
@@ -94,10 +144,10 @@ function Jivandayi() {
 
           ))}
         </div>
-          <div className="category_mock">
+        <div className="category_mock">
 
-        <img src={jmock4} alt="" srcset="" />
-          </div>
+          <img src={jmock4} alt="" srcset="" />
+        </div>
 
       </div>
       <div className="emotions">
@@ -125,14 +175,9 @@ function Jivandayi() {
 
       <div className="logo-cont">
         <img src={logo} alt="logo" />
-       
+
         <h3>jivandayi</h3>
       </div>
-
-
-
-
-
 
     </div>
   )

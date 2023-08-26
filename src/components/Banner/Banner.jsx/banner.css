@@ -1,0 +1,18 @@
+*{
+    margin: 0;padding: 0;
+}
+.banner{
+    width: 100vw;
+    height: 4em;
+    padding: 2em 0;
+}
+.banner ul{
+    list-style-type: none;
+    display: flex;
+    font-family: 'Poppins';
+    font-size: 2em;
+    gap: 2em;
+    color: var(--background-color);
+    background-color: var(--title);
+    perspective: -1000px;
+}
