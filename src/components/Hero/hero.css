@@ -10,22 +10,11 @@
     width: 95%;
     margin: 0 auto;
 }
-/* .draw{
-    background-color: azure;
-    padding: 2em 0;
-} */
-.links{
-    display: flex;
-    justify-content: flex-end;
-}
-.links ul{
-    width: clamp(15%, 15%, 100%);
-    list-style: none;
-    display: flex;
-    gap: 1em;
-    align-items: flex-end;
-    height:4em;
-}
+/* .draw{ */
+    /* background-color: azure; */
+    /* padding: 2em 0; */
+    /* height: 100vh; */
+/* }  */
 
 .fade-in {
     height: 100vh;
@@ -36,10 +25,11 @@
 .fade-in h1{
     text-transform: capitalize;
     text-align: center;
-    font-size: calc(10vw + 2em);
-    word-wrap: wrap;
-    font-family: 'Alex Brush';
-
+    font-size: calc(5vw + 2em);
+    word-wrap: break-word;
+    font-family: 'DM sans, sans-serif';
+    padding-top: 30px;
+    font-weight: 600;
 }
 
 .fade-in p{
@@ -54,25 +44,23 @@
     font-size: 1.2em;
     padding: 1.2em 0;
 }
-.fade-in p:first-of-type{
+.fade-in p{
     text-align: center;
-    padding-top: 1em;
+    padding: 1em 0;
     width: 50%;
     margin: 0 auto;
-}
-.availablity{
     font-size: 1.2em;
-    padding: 0.5em 0.5em;
-
+    font-weight: 400;
 }
-.fade-in .btn-container{
+
+.fade-in .link-container{
     width:calc(12vw + 12em);
     display: flex;
     margin: 0 auto;
    gap: 0.5em;
    padding-top:1em;
 }
-.btn-container button{
+.link-container a{
     padding: 0.8em;
     flex:1;
     border: 1px solid;
@@ -81,5 +69,35 @@
     text-align: center;
     color: var(--title);
     background-color: transparent;
+    text-decoration: none;
+    
+}
+.link-container button {
+    padding: 0.8em;
+    border: 1px solid;
+    flex: 1;
+    font: 1.2em 'Poppins';
+    border-radius: 8px;
+    text-align: center;
+    color: var(--title);
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--title);
+    background-color: transparent;
+
+}
+
+/* //mobile */
+@media (max-width:1000px) {
+    .container{
+        /* background-color: azure; */
+        height: 35em;
+    }
+    .container .draw *{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        
+    }
     
 }

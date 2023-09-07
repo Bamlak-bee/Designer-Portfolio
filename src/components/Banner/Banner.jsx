@@ -1,7 +1,6 @@
 import React from 'react'
-import Marquee from 'react-fast-marquee';
 import './banner.css'
-
+import Marquee from 'react-fast-marquee'
 
 function Banner() {
   return (
@@ -13,14 +12,22 @@ function Banner() {
 
         <ul>
             <li>Mobile app design</li>
+            <li>Web Design</li>
+            <li>Illustration</li>
             <li>Mobile app design</li>
+            <li>Web Design</li>
+            <li>Illustration</li>
             <li>Mobile app design</li>
+            <li>Web Design</li>
+            <li>Illustration</li>
             <li>Mobile app design</li>
+            <li>Web Design</li>
+            <li>Illustration</li>
             <li>Mobile app design</li>
+            <li>Web Design</li>
+            <li>Illustration</li>
             <li>Mobile app design</li>
-            <li>Web Design</li>s
-            <li>c</li>
-            <li>c</li>
+            <li>Web Design</li>
         </ul>
         </Marquee>
         

@@ -2,63 +2,178 @@ import React from 'react';
 import "./shemach.css";
 import ScrollToTopButton from '../ScrollToTopButton'; // Import your CSS file for styling
 import {
-  rec1,rec2,
-  rec3,userflow,
-  persona1,persona2,persona3
-,mock3,lofi1,
-  lofi2,lofi3,lofi4,lofi5,lofi6,lofi7,lofi8, goal,
-  process,overview,sol,prob, scr1,scr2, scr3,scr4,scr5,scr6,scr7,scr8,scr9,scr10
+  rec1, rec2,
+  rec3, userflow,
+  persona1, persona2, persona3
+  , mock3, goal,
+  process, overview, sol, prob, scr7, scr8, scr9, scr10,
+  figma, illustrator, notion, prototype3, prototype4
 } from '../../images';
+import { motion } from 'framer-motion';
+import { i } from 'fonts/defaultFont';
+import { mainColors, tagColors, lofis, hifis } from '../arrays';
+import Footer from '../Footer/Footer';
+
 
 function Shemach() {
+  const pageTransition = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      transition: {
+        ease: [0.6, 0.5, 0.3, 0.67],
+        delay: 2,
+        translateY: [-10, -8, 0]
+
+      }
+    },
+    exit: {
+      opacity: 0
+    }
+  }
+  const staggerAnimation = {
+    initial: {
+      opacity: 0,
+      y: 100
+    },
+    //the i is the index of each div, it maps through the
+    // div and delays each div by i*0.3 
+    // we have to add a custom prop inside the motion.div 
+    // so it recognizes it here 
+    animate: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.3,
+        duration: 0.8
+      }
+
+    })
+
+  }
+  const onHover = {
+    initial: {
+      scale: 1,
+    },
+    hover: {
+      scale: 1.05,
+      transition: {
+        type: 'smooth',
+      }
+    }
+  }
   return (
-    <div className='s-container'>
+    <motion.div className='s-container'
+      variants={pageTransition}
+      initial='initial'
+      animate='animate'
+      exit='exit'
+
+    >
+
       <div className="s-header">
         <div className="s-background">
 
         </div>
-          <h1>shemach</h1>
-          <p>A grocery delivery app. <br />
-            Shemach is an amharic word that means “consumer” or ”shopper”</p>
+        <h1>shemach</h1>
       </div>
       <div className="main">
-        <div className="overview">
-          <img src={overview} alt="" />
+        <motion.div className="brief" >
 
-          <div className='content'>
-            <h1>Overview</h1>
-            E-commerce apps have greatly simplified our lives and made shopping for anything a breeze. However, when it comes to the food industry, there is still a lack of well-integrated grocery shopping platforms. While there are numerous food delivery services and apps available, many people who prefer to cook at home face challenges finding ingredients conveniently.
-            This is especially true in urban areas, where a significant proportion of the population likes to prepare meals at home but struggles to find a seamless and efficient way to purchase groceries. The main pain point here is not having everything accessible at one place.Therefore, there is a need for a comprehensive and user-friendly grocery app that caters to the unique needs and making it possible to  shop for all necessary ingredients in one place instead of having to look for them individually would greatly improve the overall shopping experience for consumers.
+          <div className="brief-left" >
+            <h2>brief</h2>
+            <p>
+            Shemach is an amharic word that means “consumer” or ”shopper”
+              Shemach is an e-commerce app designed to simplify and enhance the grocery shopping experience. While other e-commerce platforms have made shopping for various products effortless, there is still a lack of well-integrated grocery shopping platforms, particularly for home cooks.
+              Shemach aims to bridge the gap by offering a one-stop solution for all your grocery shopping needs. With a wide range of products, including fresh produce and pantry staples, Shemach ensures that home cooks can find everything they need in one place. The app features intuitive search and filtering options, making it easy to find specific ingredients or discover new items to inspire your cooking. Detailed product information, such as nutritional facts and customer reviews, empowers users to make informed purchasing decisions.
+            </p>
           </div>
-        </div>
+          <div className="brief-right">
+            <div className="tools">
+              <h3>tools</h3>
+              <div className="tool-img">
 
-        <div className="overview">
-          <img src={prob} alt="" />
-
-          <div className='content'>
-            <h1>Problem</h1>
-            E-commerce apps have greatly simplified our lives and made shopping for anything a breeze. However, when it comes to the food industry, there is still a lack of well-integrated grocery shopping platforms. While there are numerous food delivery services and apps available, many people who prefer to cook at home face challenges finding ingredients conveniently.
-            This is especially true in urban areas, where a significant proportion of the population likes to prepare meals at home but struggles to find a seamless and efficient way to purchase groceries. The main pain point here is not having everything accessible at one place.Therefore, there is a need for a comprehensive and user-friendly grocery app that caters to the unique needs and making it possible to  shop for all necessary ingredients in one place instead of having to look for them individually would greatly improve the overall shopping experience for consumers.
+                <img src={figma} alt="" />
+                <img src={illustrator} alt="" />
+                <img src={notion} alt="" />
+                <img src="" alt="" />
+              </div>
+            </div>
+            <div className="timeline">
+              <h3>timeline</h3>
+              <p>2 months</p>
+            </div>
+            <div className="project">
+              <h3>project</h3>
+              <p>redesign</p>
+            </div>
           </div>
-        </div>
-        <div className="overview">
-          <img src={goal} alt="" />
 
-          <div className='content'>
-            <h1>Goal</h1>
-            E-commerce apps have greatly simplified our lives and made shopping for anything a breeze. However, when it comes to the food industry, there is still a lack of well-integrated grocery shopping platforms. While there are numerous food delivery services and apps available, many people who prefer to cook at home face challenges finding ingredients conveniently.
-            This is especially true in urban areas, where a significant proportion of the population likes to prepare meals at home but struggles to find a seamless and efficient way to purchase groceries. The main pain point here is not having everything accessible at one place.Therefore, there is a need for a comprehensive and user-friendly grocery app that caters to the unique needs and making it possible to  shop for all necessary ingredients in one place instead of having to look for them individually would greatly improve the overall shopping experience for consumers.
-          </div>
-        </div>
-        <div className="overview">
-          <img src={sol} alt="" />
 
-          <div className='content'>
-            <h1>Solution</h1>
-            To address these challenges, the grocery selling app has a clean and intuitive interface that makes navigation and product search easy. The app should also has a comprehensive amount of products, with accurate and up-to-date information, including product images, nutritional information, and ingredient lists. The app should also allow users to add items to their cart and checkout securely and quickly.  By designing an app that caters to users' needs, the Shemach can become the go-to destination for online grocery shopping.
-          </div>
-        </div>
-        
+
+        </motion.div>
+
+        <motion.div className="overview-cont"
+          variants={staggerAnimation}
+          initial='initial'
+          whileInView='animate'
+          custom={i}
+        >
+
+
+          <motion.div className="overview"
+            variants={staggerAnimation}
+            initial='initial'
+            whileInView='animate'
+            custom={i}>
+            <img src={overview} alt="" />
+
+            <div className='content'>
+              <h2>Overview</h2>
+              E-commerce apps have greatly simplified our lives and made shopping for anything a breeze. However, when it comes to the food industry, there is still a lack of well-integrated grocery shopping platforms. While there are numerous food delivery services and apps available, many people who prefer to cook at home face challenges finding ingredients conveniently.
+              This is especially true in urban areas, where a significant proportion of the population likes to prepare meals at home but struggles to find a seamless and efficient way to purchase groceries. The main pain point here is not having everything accessible at one place.Therefore, there is a need for a comprehensive and user-friendly grocery app that caters to the unique needs and making it possible to  shop for all necessary ingredients in one place instead of having to look for them individually would greatly improve the overall shopping experience for consumers.
+            </div>
+          </motion.div>
+
+          <motion.div className="overview"
+            variants={staggerAnimation}
+            initial='initial'
+            whileInView='animate'
+            custom={i}>
+            <img src={prob} alt="" />
+
+            <div className='content'>
+              <h2>Problem</h2>
+              E-commerce apps have greatly simplified our lives and made shopping for anything a breeze. However, when it comes to the food industry, there is still a lack of well-integrated grocery shopping platforms. While there are numerous food delivery services and apps available, many people who prefer to cook at home face challenges finding ingredients conveniently.
+              This is especially true in urban areas, where a significant proportion of the population likes to prepare meals at home but struggles to find a seamless and efficient way to purchase groceries. The main pain point here is not having everything accessible at one place.Therefore, there is a need for a comprehensive and user-friendly grocery app that caters to the unique needs and making it possible to  shop for all necessary ingredients in one place instead of having to look for them individually would greatly improve the overall shopping experience for consumers.
+            </div>
+          </motion.div>
+          <motion.div className="overview"
+            variants={staggerAnimation}
+            initial='initial'
+            whileInView='animate'
+            custom={i}>
+            <img src={goal} alt="" />
+
+            <div className='content'>
+              <h2>Goal</h2>
+              E-commerce apps have greatly simplified our lives and made shopping for anything a breeze. However, when it comes to the food industry, there is still a lack of well-integrated grocery shopping platforms. While there are numerous food delivery services and apps available, many people who prefer to cook at home face challenges finding ingredients conveniently.
+              This is especially true in urban areas, where a significant proportion of the population likes to prepare meals at home but struggles to find a seamless and efficient way to purchase groceries. The main pain point here is not having everything accessible at one place.Therefore, there is a need for a comprehensive and user-friendly grocery app that caters to the unique needs and making it possible to  shop for all necessary ingredients in one place instead of having to look for them individually would greatly improve the overall shopping experience for consumers.
+            </div>
+          </motion.div>
+          <motion.div className="overview"
+            variants={staggerAnimation}
+            initial='initial'
+            whileInView='animate'
+            custom={i}>
+            <img src={sol} alt="" />
+
+            <div className='content'>
+              <h2>Solution</h2>
+              To address these challenges, the grocery selling app has a clean and intuitive interface that makes navigation and product search easy. The app should also has a comprehensive amount of products, with accurate and up-to-date information, including product images, nutritional information, and ingredient lists. The app should also allow users to add items to their cart and checkout securely and quickly.  By designing an app that caters to users' needs, the Shemach can become the go-to destination for online grocery shopping.
+            </div>
+          </motion.div>
+        </motion.div>
 
         <div className="process">
           <h2>design  process</h2>
@@ -72,15 +187,25 @@ function Shemach() {
           <img src={rec1} alt="" />
         </div>
         <div className="user-flow">
+          <h2>user flow</h2>
           <img src={userflow} alt="" />
         </div>
         <div className="persona_cont">
           <h2>user personas</h2>
 
           <div className="personas">
-            <img src={persona1} alt="" />
-            <img src={persona2} alt="" />
-            <img src={persona3} alt="" />
+            <motion.img src={persona1} alt=""
+              variants={onHover}
+              initial='initial'
+              whileHover='hover'
+
+            />
+            <motion.img src={persona2} alt="" variants={onHover}
+              initial='initial'
+              whileHover='hover' />
+            <motion.img src={persona3} alt="" variants={onHover}
+              initial='initial'
+              whileHover='hover' />
           </div>
         </div>
 
@@ -114,80 +239,111 @@ function Shemach() {
             </div>
 
           </div>
-          <div className="color">
+          <div className="s-color">
             <h3>color pallete</h3>
             <div className="palette">
               <div className="main-colors">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div>primary
-                  #97CC04</div>
-                <div>secondary
-                  #EEB902</div>
-                <div>Accent
-                  #f45D01</div>
-                <div>text
-                  #474647
-                </div>
+                {mainColors.map((color, i) => (
+                  <motion.div className="m-color"
+                    key={color}
+                    style={{
+                      backgroundColor: color.color
+                    }}
+                    variants={staggerAnimation}
+                    initial='initial'
+                    whileInView='animate'
+                    custom={i}
+
+                  >
+                  </motion.div>
+                ))}
+                {mainColors.map((color, i) => (
+                  <motion.p
+                    variants={staggerAnimation}
+                    initial='initial'
+                    whileInView='animate'
+                    custom={i}>{color.color}</motion.p>
+
+                ))}
+
+
               </div>
               <div className="tag-colors">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div>#C8E6A9</div>
-                <div>#F3DAA3</div>
-                <div>#FF9F7F</div>
-                <div>#99BEEB
-                </div>
+                {tagColors.map((color, i) => (
+                  <motion.div className="t-color"
+                    style={{
+                      backgroundColor: color.color
+                    }}
+                    variants={staggerAnimation}
+                    initial='initial'
+                    whileInView='animate'
+                    custom={i}
+                  >
+
+                  </motion.div>
+
+                ))}
+                {tagColors.map((color) => (
+
+                  <p>{color.color}</p>
+                ))}
               </div>
             </div>
           </div>
 
           <div className="wireframes">
-            <h3>wireframes</h3>
-            <div className="wireframes-cont">
-              <img src={lofi1} alt="" />
-              <img src={lofi2} alt="" />
-              <img src={lofi3} alt="" />
-              <img src={lofi4} alt="" />
-              <img src={lofi5} alt="" />
-              <img src={lofi6} alt="" />
-              <img src={lofi7} alt="" />
-              <img src={lofi8} alt="" />
-            </div>
+            <h2>wireframes</h2>
+            <motion.div className="wireframes-cont"
+            >
+              {lofis.map((lofi, i) => (
+                <motion.img src={lofi.lofi} alt=""
+                  variants={staggerAnimation}
+                  initial='initial'
+                  whileInView='animate'
+                  custom={i}
+                />
+              ))}
+
+            </motion.div>
           </div>
           <div className="hi-fi">
             <h3>hi-fi designs</h3>
             <div className="onboarding">
-      
-            <img src={scr1} alt="" />
-            <img src={scr2} alt="" />
-            <img src={scr3} alt="" />
-            <img src={scr3} alt="" />
-            <img src={scr4} alt="" />
-            <img src={scr5} alt="" />
-            <img src={scr6} alt="" />
-            
+              {hifis.map((hifi) => (
+                <img src={hifi.hifi} alt="" srcset="" />
+              ))}
+
+
             </div>
-            <div className="signup">
-            <img src={scr7} alt="" />
-            <img src={scr8} alt="" />
-            <img src={scr9} alt="" />
-            <img src={scr10} alt="" />
-           
-            
+            <div className="main-screens">
+              <img src={scr7} alt="" />
+              <img src={scr8} alt="" />
+              <img src={scr9} alt="" />
+              <img src={scr10} alt="" />
+
+
             </div>
           </div>
         </div>
+        <div className="prototypes">
+          <h2>Interactions</h2>
+          <div className="proto-videos">
+
+            <video autoPlay loop >
+              <source src={prototype4} type='video/mp4' />
+            </video>
+            <video autoPlay loop >
+              <source src={prototype3} type='video/mp4' />
+            </video>
+          </div>
+        </div>
         <div className="footer">
-          <a href="https://www.behance.net/gallery/169587475/Shemach-grocery-app-case-study" target='_blank' rel="noopener noreferrer">Check the full case study on Behance</a>
-          <ScrollToTopButton/>
+          <a href="https://www.behance.net/gallery/169587475/Shemach-grocery-app-case-study" target='_blank' rel="noopener noreferrer">Check out the full case study on Behance</a>
+          <ScrollToTopButton />
         </div>
       </div>
-    </div>
+      <Footer/>
+    </motion.div>
 
   )
 }

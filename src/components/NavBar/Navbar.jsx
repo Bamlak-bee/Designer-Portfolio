@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
-import { FaTwitter, FaBehance, FaDribbble, FaX, FaBars, FaLinkedin } from 'react-icons/fa6';
-
+import { FaTwitter, FaBehance, FaDribbble, FaX, FaBars, FaLinkedin, FaBarsStaggered } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
+import { Dot } from 'lucide-react';
 import pdfFile from '../../assets/pdf/Bamlak_Resume.pdf';
 import './Navbar.css'
 
@@ -10,38 +11,77 @@ const Navbar = () => {
   const navRef = useRef(null);
   const showNavBar = () => {
     navRef.current.classList.toggle('responsive_nav');
+
+    
   }
+  const onHover = {
+    initial: {
+        y: 0
+    },
+    hover: {
+        y: [-6,-5,-4,-3,-2,-1,0],
+        transition: {
+            type: 'bounce'
+        }
+    }
+}
   return (
     <header>
-      <div className="nav">
-        <div className="left">
-          <p>Bamlak Tesfaye</p>
-        </div>
-        <div className="right" ref={navRef}>
-          <ul>
-            <li> <a href="https://google.com">About me</a></li>
-            <li><a href={pdfFile} target="_blank" rel="noopener noreferrer">Resume </a></li>
+      <div className="links">
+                
+                <div className='availablity'>
+                    <Dot size={36} color='#FFD100' fill= 'white'>
 
-          </ul>
-          <FaX className='nav-btn close-btn' onClick={showNavBar} size={16} />
-        </div>
-        <FaBars className='nav-btn' onClick={showNavBar} size={16} />
-      </div>
-      <div className="contact">
-        <div className="about" >Hello, I am Bamlak, a passionate UI/UX designer and an always curious tech enthusiast. <br />  I design for both web and mobile platforms.</div>
-        <div className='links'>
-          <p>Let's work together:</p>
-          <a href='bamlakbee.12@gmail.com'>bamlakbee.12@gmail.com</a>
-          <div className="social-wrapper">
-            <a href="http://" target="_blank" rel="noopener noreferrer"><FaTwitter size={32} color='#FFD100'/></a>
-            <a href="http://" target="_blank" rel="noopener noreferrer"><FaLinkedin size={32} color='#FFD100' /></a>
-            <a href="http://" target="_blank" rel="noopener noreferrer"><FaBehance size={32} color='#FFD100' /></a>
-            <a href="http://" target="_blank" rel="noopener noreferrer"><FaDribbble size={32} color='#FFD100' /></a>
-            
-          </div>
+                    </Dot>
+                 <p> Available for work</p>  
+                </div>
+                <div className="right" ref={navRef}>
 
-        </div>
-      </div>
+                <ul>
+                    <motion.li
+                     variants={onHover}
+                     initial='initial'
+                     whileHover="hover"
+                    >
+                        <motion.a href="https://twitter.com/Bamlak_b" target="_blank" rel="noopener noreferrer"
+                           
+                        >
+                            <FaTwitter size={32}  color='#FFD100' /></motion.a>
+                            <p>Twitter</p>
+                    </motion.li>
+                    <motion.li 
+                     variants={onHover}
+                            initial='initial'
+                            whileHover="hover">
+
+                        <a href="https://www.linkedin.com/in/bamlak-kebede-508689193/" target="_blank" rel="noopener noreferrer"
+                        ><FaLinkedin size={32} color='#FFD100'
+
+                            /></a>
+                            <p>Linkedin</p>
+                    </motion.li>
+                    <motion.li  variants={onHover}
+                            initial='initial'
+                            whileHover="hover">
+
+                        <a href="https://www.behance.net/bamlakkebede" target="_blank" rel="noopener noreferrer"><FaBehance size={32} color='#FFD100' /></a>
+                  <p>Behance</p> 
+                    </motion.li>
+                    <motion.li 
+                     variants={onHover}
+                     initial='initial'
+                     whileHover="hover">
+
+                        <a href="https://dribbble.com/bamlakT" target="_blank" rel="noopener noreferrer"><FaDribbble size={32} color='#FFD100' /></a>
+                        <p>Dribble</p>
+                    </motion.li>
+                </ul>
+                <FaX className='nav-btn close-btn' onClick={showNavBar} size={24} color='#d6d6d6' />
+                </div>
+                <FaBars className='nav-btn' onClick={showNavBar} size={24}
+                />
+            </div>
+
     </header>
   )
 

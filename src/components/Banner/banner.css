@@ -4,15 +4,18 @@
 .banner{
     width: 100vw;
     height: 4em;
-    padding: 2em 0;
+    margin: 8em 0;
+    background-color: aliceblue;
 }
 .banner ul{
     list-style-type: none;
     display: flex;
     font-family: 'Poppins';
-    font-size: 2em;
+    font-size: 1.1em;
     gap: 2em;
-    color: var(--background-color);
-    background-color: var(--title);
+    padding:2em;
+    color: var(--title);
+    background-color: var(--background);
     perspective: -1000px;
+    
 }

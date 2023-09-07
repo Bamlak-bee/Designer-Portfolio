@@ -1,31 +1,32 @@
 import React from 'react';
 import Gallery from './components/Gallery';
-import Footer from './components/Footer';
+import About from './components/About';
 // import Navbar from './components/NavBar/Navbar';
 import Hero from './components/Hero/Hero.jsx';
-import Banner from './components/Banner/Banner.jsx/Banner';
+import Banner from './components/Banner/Banner.jsx';
+import { motion } from 'framer-motion';
+import Footer from './components/Footer/Footer';
 
 
 function Home() {
+  
   return (
-    <div className='App'> 
+    <motion.div className='App'> 
     {/* <Navbar/> */}
     <Hero/>
       <main>
        
         <div className="gallery">
-          <h1>featured work</h1>
           <Gallery />
 
         </div>
-
-
       </main>
       <Banner/>
      
-      <Footer />
+      <About />
+      <Footer/>
       
-      </div>
+      </motion.div>
   )
 }
 

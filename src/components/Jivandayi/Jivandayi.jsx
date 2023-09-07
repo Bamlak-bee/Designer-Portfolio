@@ -1,10 +1,13 @@
 import React from 'react'
 import './jivandayi.css'
-import {motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import {
-  jmock, jmock2, jmock5, jphoto, jmock7, jmock4, logo
+  jmock, jmock2, jmock5, jphoto, jmock7, jmock4, figma, photoshop, illustrator,j_proto,j_proto2
 } from '../../images'
-import { emojis, colors, categories } from '../arrays'
+import { emojis, colors, categories } from '../arrays';
+import Footer from '../Footer/Footer';
+import ScrollToTopButton from '../ScrollToTopButton';
+
 
 
 function Jivandayi() {
@@ -28,24 +31,42 @@ function Jivandayi() {
   }
   const scrollAnimation = {
     initial: {
-      opacity:0,
-      scale:0.8,
+      opacity: 0,
+      scale: 0.8,
       y: -50
     },
-    scroll :{
+    scroll: {
       opacity: 1,
       scale: 1,
-     y:50,
-     transition: {
-      stiffness: 20,
-      type : 'spring',
-      delay: 0.1
-     },
+      y: 50,
+      transition: {
+        stiffness: 20,
+        type: 'spring',
+        delay: 0.1
+      },
     }
   }
+  const pageTransition = {
+    initial: { height: 0 },
+    animate: {
+      height: '100%',
+      transition: {
+        ease: [0.6, 0.5, 0.3, 0.67],
+        delay: 2,
+        translateY: [-10, -8, 0]
 
+      }
+    },
+    exit: {
+      y: window.innerHeight
+    }
+  }
   return (
-    <div className='j-container'>
+    <motion.div className='j-container'
+      variants={pageTransition}
+      initial='initial'
+      animate='animate'
+      exit='exit'>
       <div className="j-header">
         <div className="j-background">
 
@@ -53,57 +74,64 @@ function Jivandayi() {
 
         <h1
         >jivandayi</h1>
-        <p>mental health app.</p>
+       
       </div>
-
-
       <motion.div className="brief"
-      variants={scrollAnimation}
-      initial = 'initial'
-      whileInView= 'scroll'
-      viewport={{once: true}}
-           >
-      
-            
+        variants={scrollAnimation}
+        initial='initial'
+        whileInView='scroll'
+        viewport={{ once: true }}  >
+
         <div className="brief-left" >
           <h2>brief</h2>
-          <p>Jivandyai means "giving life".
-            Jivandayi is an app for improving mental health.
-            It offers multiple methods to alleviate mental health issues.
-            It was a redesign project. I was repsonsible for redesigning the screens,
-            creating custom illustrations, and prototypes
+          <p>Jivandyai, meaning "giving life," is a mobile application focused on enhancing mental health and well-being. The app provides users with various methods to alleviate mental health issues, aiming to create a positive impact on users' emotional and psychological well-being. I was responsible for the redesign of the existing app, with a focus on enhancing user experience, visual appeal, and functionality.
 
           </p>
         </div>
-      
         <div className="brief-right">
-            <h2>The project</h2>
-          <p>
-            <ul>
-              <li>Jivandayi app</li>
-              <li>Mobile app</li>
-              <li>Redesign app</li>
-              <li> </li>
-            </ul>
-          </p>
+          <div className="tools">
+            <h3>tools</h3>
+            <div className="tool-img">
+
+              <img src={figma} alt="" />
+              <img src={illustrator} alt="" />
+              <img src={photoshop} alt="" />
+            </div>
+          </div>
+          <div className="timeline">
+            <h3>timeline</h3>
+            <p>2 months</p>
+          </div>
+          <div className="project">
+            <h3>project</h3>
+            <p>redesign</p>
+          </div>
         </div>
+
+
 
       </motion.div>
 
-      <motion.div className="mock-1" 
-      variants={scrollAnimation}
-      initial = 'initial'
-      whileInView= 'scroll'
-      viewport={{once: true}}
+      <motion.div className="mock-1"
+        variants={scrollAnimation}
+        initial='initial'
+        whileInView='scroll'
+        viewport={{ once: true }}
       >
 
         <img src={jmock} alt="" />
       </motion.div>
 
-      <div className="photo-cont">
+      <motion.div className="photo-cont" 
+      variants={scrollAnimation}
+      initial='initial'
+      whileInView='scroll'
+
+      viewport={{ once: true }}
+      >
         <img src={jmock2} alt="" srcset="" />
 
-      </div>
+      </motion.div>
 
       <div className="color-pallete">
         <h2>Pallete</h2>
@@ -121,14 +149,24 @@ function Jivandayi() {
               whileInView='animate'
               custom={i}
             >
-              <p>{color.color}</p>
 
             </motion.div>
           ))}
+
+          {colors.map((color) => (
+
+            <p>{color.color}</p>
+          ))}
+
         </div>
       </div>
 
-      <div className="categories">
+      <motion.div className="categories" 
+      variants={scrollAnimation}
+      initial='initial'
+      whileInView='scroll'
+      viewport={{ once: true }}
+      >
 
         <div className="category">
           {categories.map((image) => (
@@ -149,37 +187,58 @@ function Jivandayi() {
           <img src={jmock4} alt="" srcset="" />
         </div>
 
-      </div>
+      </motion.div>
       <div className="emotions">
-        <div className='emojis'>
+        <motion.div className='emojis'
+         variants={scrollAnimation}
+         initial='initial'
+         whileInView='scroll'
+         viewport={{ once: true }}
+        >
           {
-            emojis.map((emoji) => (
+            emojis.map((emoji,i) => (
 
-              <img src={emoji.emoji} alt="" className='emoji' />
+              <img src={emoji.emoji} alt="" className='emoji'
+             />
             ))
           }
 
 
-        </div>
+        </motion.div>
 
       </div>
 
-      <div className="mock-3">
+      <motion.div className="mock-3"  
+      variants={scrollAnimation}
+      initial='initial'
+      whileInView='scroll'
+      viewport={{ once: true }}>
         <img src={jmock5} alt="" />
-      </div>
-      <div className="photo">
+      </motion.div>
+      <motion.div className="photo" 
+       variants={scrollAnimation}
+       initial='initial'
+       whileInView='scroll'>
         <img src={jphoto} alt="" />
         <img src={jmock7} alt="" />
 
+      </motion.div>
+
+      <div className="interactions">
+        <h3>interactions</h3>
+        <div className="proto-videos">
+
+          <video autoPlay loop >
+            <source src={j_proto} type='video/mp4' />
+          </video>
+          <video autoPlay loop>
+            <source src={j_proto2} type='video/mp4' />
+          </video>
+        </div>
       </div>
-
-      <div className="logo-cont">
-        <img src={logo} alt="logo" />
-
-        <h3>jivandayi</h3>
-      </div>
-
-    </div>
+      <Footer/>
+<ScrollToTopButton/>
+    </motion.div>
   )
 }
 

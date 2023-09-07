@@ -1,74 +1,70 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { FaTwitter, FaBehance, FaDribbble, FaLinkedin } from 'react-icons/fa6';
 import './hero.css';
 import Signature from "../signature.jsx"
-
+import { easeIn, motion } from 'framer-motion';
+import { Dot } from 'lucide-react';
+import Resume from '../../assets/pdf/Bamlak_Resume.pdf'
+import CopyButton from './copy';
+import Navbar from '../NavBar/Navbar';
 
 const Hero = () => {
+
+    const fadeIn = {
+        hidden: {
+            opacity: 0,
+            y: 1000
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 6.5,
+                ease: easeIn,
+                type: 'spring',
+                stiffness: 20,
+                ease: easeIn
+
+            }
+        }
+    }
+   
+
     return (
         <div className='container'>
-            <div className="links">
-                <ul>
-                    <li>
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><FaTwitter size={32} color='#FFD100' /></a>
-                    </li>
-                    <li>
-
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><FaLinkedin size={32} color='#FFD100' /></a>
-                    </li>
-                    <li>
-
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><FaBehance size={32} color='#FFD100' /></a>
-                    </li>
-                    <li>
-
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><FaDribbble size={32} color='#FFD100' /></a>
-                    </li>
-                </ul>
-            </div>
+            <Navbar/>
 
             <div className="hero-section">
                 {/* fade out */}
                 <div className="draw">
-                    
-                    <Signature/>
+
+                    <Signature />
 
                 </div>
                 {/* fade in */}
-                <div className="fade-in">
 
-                    <h1>bamlak</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, exercitationem?
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, laborum.
+
+                <motion.div className="fade-in"
+                    variants={fadeIn}
+                    initial='hidden'
+                    animate='show'
+                >
+
+                    <h1>bamlak kebede</h1>
+                    <p>A passionate UI/UX designer and an always curoius tech enthusisat.
+                        I design both for mobile and web
                     </p>
-                    <a href='bamlakbee.12@gmail.com'>bamlakbee.12@gmail.com</a>
-                    <p className='availablity'>Available for work</p>
 
-                    <div className="btn-container">
-                        <button className="about">About</button>
-                        <button className="about">Resume</button>
+
+                    <div className="link-container">
+                        <CopyButton />
+                        <Link className="about" to={Resume} target='_blank'>Resume</Link>
                     </div>
 
-
-
-
-
-                </div>
-
-
-
-
-
-
+                </motion.div>
 
             </div>
-
-
-
-
-
-
-
         </div>
     )
 }
