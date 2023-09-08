@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
-import { FaTwitter, FaBehance, FaDribbble, FaX, FaBars, FaLinkedin, FaBarsStaggered } from 'react-icons/fa6';
+import { FaTwitter, FaBehance, FaDribbble, FaX, FaBars, FaLinkedin } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 import { Dot } from 'lucide-react';
-import pdfFile from '../../assets/pdf/Bamlak_Resume.pdf';
 import './Navbar.css'
 
 

@@ -2,8 +2,7 @@ import React from 'react';
 import '../App.css';
 import {
     landing,
-    shemach, jivan,
-    web, phone, pen
+    shemach, jivan, phone, pen
 }
     from '../images'
 
