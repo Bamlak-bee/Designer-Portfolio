@@ -89,7 +89,7 @@
 }
 
 /* //mobile */
-@media (max-width:1000px) {
+@media (max-width:720px) {
     .container{
         /* background-color: azure; */
         height: 35em;

@@ -24,3 +24,10 @@
 .footer :nth-child(2){
     color: var(--title);
 }
+@media (max-width:720px) {
+    .footer{
+
+        display: none;
+    }
+    
+}
