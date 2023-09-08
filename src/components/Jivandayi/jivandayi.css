@@ -5,9 +5,9 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
 
-:root {
+  :root {
     --background-color: #202020;
     --text-color: #D6D6D6;
     --title: #FFD100;
@@ -40,7 +40,7 @@
 
 .j-header h1 {
     color: var(--background-color);
-    font-family: Poller One;
+    font-family: Istok Web;
     font-size: 4em;
     text-transform: uppercase;
     text-align: center;
@@ -64,7 +64,7 @@
  .brief-left h2{
     color: var(--title);
     text-transform: capitalize;
-    font-family: 'Poppins';
+    font-family: 'Istok Web';
     font-weight: 500;
     font-size: 32px;
     padding-bottom: 10px;
@@ -88,6 +88,7 @@
     color: var(--title);
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-family: 'Istok Web';
 
 }
 .brief-right p{
@@ -146,9 +147,9 @@
 .color-pallete h2{
     text-align: center;
     font-size: 3em;
-    padding-bottom: 1em;
-    font-family: 'Poller One';
-    color: var(--text-color);
+    padding: 1em 0;
+    font-family: 'Istok Web';
+    color: var(--title);
     font-weight: 400;
 }
 
@@ -243,14 +244,15 @@
     
 }
 .interactions h3{
-    font-size: 5em;
+    font-size: 3em;
     text-align: center;
     color: #D6D6D6;
     text-transform: capitalize;
-    font-family: 'DM Sans';
+    font-family: 'Istok Web';
     display: grid;
     place-items: center;
     padding: 1em 0;
+    color: var(--title);
 
 }
 .proto-videos{

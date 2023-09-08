@@ -7,7 +7,7 @@ import {emoji1, emoji2, emoji3,
   c_music,scr1,scr2, scr3,scr4,scr5,scr6,
   c_write,
   c_yoga,lofi1,
-  lofi2,lofi3,lofi4,lofi5,lofi6,lofi7,lofi8,} from '../images'
+  lofi2,lofi3,lofi4,lofi5,lofi6,lofi7,lofi8, scr7,scr8,scr9,scr10} from '../images'
 
 export const emojis = [
     { id: 1, emoji: emoji1},
@@ -70,4 +70,11 @@ export const hifis = [
   {id:4, hifi: scr4},
   {id:5, hifi:scr5 },
   {id:6, hifi:scr6 },
+]
+
+export const mainScreens = [
+  {id:1, scr:scr7 },
+  {id:2, scr: scr8},
+  {id:3, scr: scr9},
+  {id:4, scr: scr10},
 ]

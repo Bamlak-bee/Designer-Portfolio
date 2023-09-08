@@ -6,12 +6,12 @@ import {
   rec3, userflow,
   persona1, persona2, persona3
   , mock3, goal,
-  process, overview, sol, prob, scr7, scr8, scr9, scr10,
+  process, overview, sol, prob,
   figma, illustrator, notion, prototype3, prototype4
 } from '../../images';
 import { motion } from 'framer-motion';
 import { i } from 'fonts/defaultFont';
-import { mainColors, tagColors, lofis, hifis } from '../arrays';
+import { mainColors, tagColors, lofis, hifis, mainScreens } from '../arrays';
 import Footer from '../Footer/Footer';
 
 
@@ -62,6 +62,24 @@ function Shemach() {
       }
     }
   }
+  const scrollAnimation = {
+    initial: {
+      opacity: 0,
+      scale: 0.8,
+      y: -50
+    },
+    scroll: {
+      opacity: 1,
+      scale: 1,
+      y: 50,
+      transition: {
+        stiffness: 20,
+        type: 'spring',
+        delay: 0.1
+      },
+    }
+  }
+
   return (
     <motion.div className='s-container'
       variants={pageTransition}
@@ -78,7 +96,11 @@ function Shemach() {
         <h1>shemach</h1>
       </div>
       <div className="main">
-        <motion.div className="brief" >
+        <motion.div className="brief" 
+         variants={scrollAnimation}
+         initial='initial'
+         whileInView='scroll'
+         viewport={{ once: true }} >
 
           <div className="brief-left" >
             <h2>brief</h2>
@@ -210,9 +232,13 @@ function Shemach() {
         </div>
 
 
-        <div className="mock-3">
+        <motion.div className="mock-3"
+         variants={scrollAnimation}
+         initial='initial'
+         whileInView='scroll'
+         viewport={{ once: true }} >
           <img src={mock3} alt="" />
-        </div>
+        </motion.div>
 
         <div className="style-guides">
           <h2>typography</h2>
@@ -309,17 +335,28 @@ function Shemach() {
           <div className="hi-fi">
             <h3>hi-fi designs</h3>
             <div className="onboarding">
-              {hifis.map((hifi) => (
-                <img src={hifi.hifi} alt="" srcset="" />
+              {hifis.map((hifi,i) => (
+                <motion.img src={hifi.hifi} alt="" 
+                 variants={staggerAnimation}
+                initial='initial'
+                whileInView='animate'
+                custom={i} />
               ))}
 
 
             </div>
             <div className="main-screens">
-              <img src={scr7} alt="" />
+              {mainScreens.map((mainScreen,i)=>(
+                <motion.img src={mainScreen.scr} alt="" srcset=""
+                variants={staggerAnimation}
+            initial='initial'
+            whileInView='animate'
+            custom={i} />
+              ))}
+              {/* <img src={scr7} alt="" />
               <img src={scr8} alt="" />
               <img src={scr9} alt="" />
-              <img src={scr10} alt="" />
+              <img src={scr10} alt="" /> */}
 
 
             </div>
@@ -337,7 +374,7 @@ function Shemach() {
             </video>
           </div>
         </div>
-        <div className="footer">
+        <div className="footer-link">
           <a href="https://www.behance.net/gallery/169587475/Shemach-grocery-app-case-study" target='_blank' rel="noopener noreferrer">Check out the full case study on Behance</a>
           <ScrollToTopButton />
         </div>

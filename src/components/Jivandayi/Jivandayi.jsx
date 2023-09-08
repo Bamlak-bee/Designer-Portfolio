@@ -148,6 +148,7 @@ function Jivandayi() {
               initial='initial'
               whileInView='animate'
               custom={i}
+              viewport={{ once: true }} 
             >
 
             </motion.div>
@@ -218,7 +219,8 @@ function Jivandayi() {
       <motion.div className="photo" 
        variants={scrollAnimation}
        initial='initial'
-       whileInView='scroll'>
+       whileInView='scroll'
+       viewport={{ once: true }} >
         <img src={jphoto} alt="" />
         <img src={jmock7} alt="" />
 

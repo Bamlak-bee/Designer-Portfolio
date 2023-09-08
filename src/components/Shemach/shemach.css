@@ -5,6 +5,8 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
 
 :root {
     --background-color: #202020;
@@ -45,16 +47,14 @@ body {
 
 .s-header h1 {
     color: var(--background-color);
-    font-family: Poller One;
-    font-size: 4em;
+    font-family: Istok Web;
+     font-size: 4em;
     text-transform: uppercase;
     text-align: center;
     position: relative;
     z-index: 1;
     top: 1em;
 }
-
-
 
 .main {
     color: var(--text-color);
@@ -86,12 +86,11 @@ body {
 .main .overview h2{
     font-size: 2em;
     font-weight: 400;
+    font-family: 'Istok Web';
 }
 .main .overview img {
     padding: 40px;
 }
-
-
 .process {
     display: flex;
     flex-direction: column;
@@ -106,7 +105,8 @@ body {
 .process h2 {
     color: var(--text);
     font-size: 3rem;
-    font-family: 'Poller One';
+    font-family: 'Istok Web';
+    color:var(--title);
     padding-bottom: 100px;
     text-transform: capitalize;
 }
@@ -116,25 +116,27 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    /* gap: 10px; */
-
 }
 
 .mock img {
     width: 20%;
-
 }
-
+.user-flow{
+    height: 80em;
+}
 .user-flow img {
     width: 100%;
     clip-path: inset(100px 0 0 0 );
+    margin-top: -80px;
 }
 .user-flow h2{
     text-align: center;
-    font-family: 'Poller One';
+    font-family: 'Istok Web';
+    color:var(--title);
     font-size: 3em;
     margin-top:2em;
     text-transform: capitalize;
+    color:var(--title);
 }
 .persona_cont {
     display: flex;
@@ -147,8 +149,9 @@ body {
 
 .persona_cont h2 {
     text-align: center;
-    color: var(--text-2, #D6D6D6);
-    font-family: 'Poller One';
+   color:var(--title);
+    font-family: 'Istok Web';
+    color:var(--title);
     font-size: 3rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -176,16 +179,17 @@ body {
 }
 
 .style-guides h2 {
-    color: var(--text-2, #D6D6D6);
-    font-family: 'Poller One';
+    color: var(--title);
+    font-family: 'Istok Web';
+    color:var(--title);
     font-size: 3rem;
-    margin-bottom: 2em;
+    margin: 1em auto;
     text-transform: uppercase;
     text-align: center;
 
 }
 .style-guides{
-    margin: 0 auto;
+    margin: 1em auto;
     width: 95%;
 }
 
@@ -198,7 +202,7 @@ body {
 }
 
 .font h3 {
-    color: var(--text-2, #D6D6D6);
+    color: var(--text-color);
     font-family: 'SF Pro';
     font-size: 7.5rem;
     font-style: normal;
@@ -207,7 +211,7 @@ body {
 }
 
 .font p {
-    color: var(--text-2, #D6D6D6);
+    color: var(--text-color);
     font-size: 3.75rem;
     text-transform: capitalize;
     font-family: 'SF Pro';
@@ -252,7 +256,8 @@ body {
     text-align: center;
     text-transform: capitalize;
     color: var(--text-2, #D6D6D6);
-    font-family: 'Poller One';
+    font-family: 'Istok Web';
+    color:var(--title);
     font-size: 3rem;
     font-weight: normal;
     text-transform: uppercase;
@@ -289,7 +294,8 @@ gap: 1em;
 .wireframes h2 {
     text-align: center;
     color: var(--text-color);
-    font-family: 'Poller One';
+    font-family: 'Istok Web';
+    color:var(--title);
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: 500;
@@ -346,7 +352,8 @@ gap: 1em;
 
 }
 .prototypes h2{
-    font-family: 'Poller One';
+    font-family: 'Istok Web';
+    color:var(--title);
     font-size: 3em;
     text-align: center;
     margin: 2em 0;
@@ -361,21 +368,23 @@ gap: 1em;
     color: var(--text-color);
     text-align: center;
     font-size: 3rem;
-    font-family: 'Poller One';
+    font-family: 'Istok Web';
+    color:var(--title);
     text-transform: uppercase;
     padding: 40px 0;
 }
 
-.footer a {
+.footer-link a {
     text-decoration: none;
     color: var(--text-color);
     text-align: center;
     font-size: 1.2rem;
     font-family: 'Poppins';
-    margin: 60px 0;
 }
-
-.footer a:hover {
+.footer-link{
+    margin: 4em 0;
+}
+.footer-link a:hover {
     text-decoration: underline var(--title);
 
 }
