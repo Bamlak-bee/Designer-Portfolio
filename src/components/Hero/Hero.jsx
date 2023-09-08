@@ -1,10 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { FaTwitter, FaBehance, FaDribbble, FaLinkedin } from 'react-icons/fa6';
 import './hero.css';
 import Signature from "../signature.jsx"
 import { easeIn, motion } from 'framer-motion';
-import { Dot } from 'lucide-react';
 import Resume from '../../assets/pdf/Bamlak_Resume.pdf'
 import CopyButton from './copy';
 import Navbar from '../NavBar/Navbar';
@@ -23,9 +21,7 @@ const Hero = () => {
                 delay: 6.5,
                 ease: easeIn,
                 type: 'spring',
-                stiffness: 20,
-                ease: easeIn
-
+                stiffness: 20
             }
         }
     }

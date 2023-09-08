@@ -3,7 +3,6 @@ import './App.css';
 // import AnimatedRoutes from './components/AnimatedRoutes';
 import { BrowserRouter} from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes';
-import Footer from './components/Footer/Footer';
 
 
 function App() {

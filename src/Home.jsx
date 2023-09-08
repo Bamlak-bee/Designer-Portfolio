@@ -1,7 +1,6 @@
 import React from 'react';
 import Gallery from './components/Gallery';
 import About from './components/About';
-// import Navbar from './components/NavBar/Navbar';
 import Hero from './components/Hero/Hero.jsx';
 import Banner from './components/Banner/Banner.jsx';
 import { motion } from 'framer-motion';
@@ -12,7 +11,6 @@ function Home() {
   
   return (
     <motion.div className='App'> 
-    {/* <Navbar/> */}
     <Hero/>
       <main>
        
