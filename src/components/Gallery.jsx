@@ -47,7 +47,7 @@ function Gallery() {
             </div>
             <div className="coming-soon">
              <img src={landing} alt="" />
-            <h3>coming soon</h3>
+            <h3>working on it</h3>
             </div>
 
 

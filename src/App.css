@@ -54,8 +54,8 @@
 
 .coming-soon h3{
   color: var(--title);
-  /* text-align: center; */
   font-size: 42px;
+  word-wrap: break-word;
   text-transform: uppercase;
   opacity: 40%;
   width: 100%;
@@ -136,8 +136,14 @@
     padding: 30px 30px;
     width: 95%;
   }
-  .coming-soon{
+  .coming-soon {
     width: 95%;
+  }
+  .coming-soon h3{
+    width: 55%;
+    text-align: center;
+    word-wrap: break-word;
+
   }
   .about_cont{
     display: flex;
